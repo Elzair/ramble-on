@@ -6,7 +6,7 @@ ramble-on
 Why should you use it?
 ----------------------
 
-A good question! Let's say you have are working with a really big Javascript object.
+A good question! Let's say you are working with a really big Javascript object.
 
 ```javascript
 var big_object = {
