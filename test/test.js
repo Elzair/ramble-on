@@ -9,8 +9,13 @@ describe('ramble-on', function() {
     object = {foo: {bar: {baz: ["test"]}}};
   });
 
-  it('should return the correct property', function() {
+  it('should return the correct property if no value was specified', function() {
     assert.strictEqual(ramble(object, ["foo", "bar", "baz", 0]), "test");
+  });
+
+  it('should set the property to the given value', function() {
+    ramble(object, ["foo", "bar"], "another test");
+    assert.strictEqual(ramble(object, ["foo", "bar"]), "another test");
   });
 
   it('should return the tree if properties is an empty array', function() {
