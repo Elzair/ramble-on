@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Elzair/ramble-on/issues"
   },
-  "homepage": "https://github.com/Elzair/ramble-on"
+  "homepage": "https://github.com/Elzair/ramble-on",
+  "dependencies": {
+    "typeof": "~1.0.0"
+  }
 }
