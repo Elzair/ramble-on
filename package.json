@@ -23,5 +23,8 @@
   "homepage": "https://github.com/Elzair/ramble-on",
   "dependencies": {
     "typeof": "~1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4"
   }
 }

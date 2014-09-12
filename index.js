@@ -1,17 +1,20 @@
 var typeOf = require('typeof');
 
-exports.get_node = function(tree, properties) {
+module.exports = function(tree, properties) {
   if (typeOf(tree) !== 'object') {
-    throw "Invalid tree: " + tree;
+    throw "Invalid tree!";
   }
 
   if (typeOf(properties) !== 'array') {
-    throw "Invalid array: " + properties;
+    throw "Invalid properties!";
   }
 
   var node = tree;
 
   for (var i=0; i<properties.length; i++) {
+    if (!(properties[i] in node)) {
+      throw "Invalid property";
+    }
     node = node[properties[i]];
   }
 
