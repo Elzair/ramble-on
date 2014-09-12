@@ -1,6 +1,6 @@
 {
   "name": "ramble-on",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Your one-stop property returning shop!",
   "main": "index.js",
   "scripts": {
