@@ -31,7 +31,6 @@ module.exports = function() {
       if (!createProperties) {
         throw "Invalid property";
       }
-      console.log(parseInt(properties[i+1], 10));
       node[properties[i]] = isInt(properties[i+1]) ? [] : {};
     }
     node = node[properties[i]];
