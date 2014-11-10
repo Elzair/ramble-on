@@ -81,7 +81,7 @@ console.log(JSON.stringify(property, null, 2));
 
 You can even set properties as well. Just add one parameter: the value to set
 
-**Example**:
+**Example:**
 ```javascript
 ramble(object, ["foo", "bar"], "Hello");
 console.log(JSON.stringify(object, null, 2));
@@ -108,6 +108,25 @@ var object = big_object; // NOTE: If you are following along, you might want to 
 ramble(object, ["foo", "bar", "baz", "main", 1], object);
 var prop = ramble(object, ["foo", "bar", "baz", "main", 1, "oof", 0]);
 console.log(prop); // Outputs: 2
+```
+
+**NEW:** If you want to create a nested value and do not want to manually create its parent values, just append a `true` to the arguments to tell **ramble-on** to create nested values.
+
+**Example:**
+```javascript
+var object = { foo: 'bar' };
+ramble(object, ['fizz', 'buzz'], 15, true);
+console.log(object.fizz.buzz); // Prints 15
+```
+
+**NOTE:** If you specify an integer as one of the properties, **ramble-on** will assume the previous property is an array instead of an object.
+
+**Example:**
+```javascript
+var object = { foo: 'bar' };
+ramble(object, ['fizz', 0], 'buzz', true);
+object.fizz.push('baz');
+console.log(object.fizz.length) // Prints 2
 ```
 
 Get ramble-on today!

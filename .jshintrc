@@ -13,5 +13,8 @@
       , "module" : false
       , "exports" : false
       , "setTimeout" : false
+      , "it": false
+      , "describe": false
+      , "beforeEach": false
     }
 }
